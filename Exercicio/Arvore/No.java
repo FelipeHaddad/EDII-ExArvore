@@ -1,37 +1,16 @@
 package Arvore;
 
-public class no {
+public class No {
     int chave;
-    int nivel;
-    no esq, dir;
+    public No esq, dir;
 
-    public no() {
-        this.chave = 0;
-        this.nivel = 0;
+    public No(int chave) {
+        this.chave = chave;
         this.esq = null;
         this.dir = null;
     }
 
-    public no(int chave,int nivel,no esq,no dir) {
-        this.chave = chave;
-        this.nivel = nivel;
-        this.esq = esq;
-        this.dir = dir;
-    }
-
-    public no getEsq() {
-        return this.esq;
-    }
-
-    public no getDir() {
-        return this.dir;
-    }
-
-    public int getChave() {
-        return this.chave;
-    }
-
-    public int getNivel() {
-        return this.nivel;
-    }
+    public No getEsq() { return this.esq; }
+    public No getDir() { return this.dir; }
+    public int getChave() { return this.chave; }
 }
