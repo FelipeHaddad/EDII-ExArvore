@@ -1,34 +1,28 @@
 package Arvore;
 
 public class Arvore {
-    no raiz;
-
-    public static void main(String []args) {
-
-    }
+    private No raiz;
 
     public Arvore() {
-
+        this.raiz = null;
     }
 
-    private int alturaArvore() {
-        int alturaAtual = 0;
-        no noInicio = raiz;
-
-        return 1;
+    public int alturaArvore() {
+        return calcularAltura(raiz);
     }
 
-    private int recursividade(no node) {
+    private int calcularAltura(No node) {
         if (node == null) {
-            return node.getNivel();
+            return 0;
         }
 
-        if (node.getEsq() != null){
+        int alturaEsq = calcularAltura(node.getEsq());
+        int alturaDir = calcularAltura(node.getDir());
 
-        }
-        return 1;
-
+        return 1 + Math.max(alturaEsq, alturaDir);
     }
 
-
+    public void setRaiz(No raiz) {
+        this.raiz = raiz;
+    }
 }
